@@ -13,7 +13,7 @@ namespace WeatherApp.Services
         /// <param name="ex">Exception.</param>
         public void HandleError(Exception ex)
         {
-           // DisplayAlert(ex).FireAndForgetSafeAsync();
+            DisplayAlert(ex).ConfigureAwait(false);
         }
 
         async Task DisplayAlert(Exception ex)
