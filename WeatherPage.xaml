@@ -51,8 +51,7 @@
                x:Name="ImgWeatherIcon"
                VerticalOptions="Start"
                HeightRequest="300"
-               WidthRequest="300"
-               Source="sky.png"/>
+               WidthRequest="300"/>
 
         <Grid Grid.Row="3" 
               RowDefinitions="Auto,Auto"
