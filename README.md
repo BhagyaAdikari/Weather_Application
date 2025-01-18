@@ -52,7 +52,7 @@ This Weather Application is a cross-platform application built with C#. It fetch
 ### Installation Steps
 1. Clone or download the repository to your local machine:
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/BhagyaAdikari/Weather_Application.git)
    ```
 2. Open the solution file (`.sln`) in Visual Studio.
 3. Restore NuGet packages by building the solution.
