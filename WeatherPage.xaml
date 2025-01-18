@@ -6,33 +6,42 @@
     <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" 
           RowSpacing="20">
         <StackLayout Grid.Row="0" 
-                     Margin="20,20,20,0" 
-                     Orientation="Horizontal">
+             Margin="20,20,20,0" 
+             Orientation="Horizontal">
             <Grid Padding="10">
+                <!-- Shadow for the grid -->
                 <Grid>
                     <Grid.Shadow>
                         <Shadow Brush="LightGray" Radius="10" />
                     </Grid.Shadow>
                 </Grid>
 
+                <!-- Border with rounded corners -->
                 <Border Background="White"
-            Stroke="LightGray"
-            StrokeThickness="1">
+                Stroke="LightGray"
+                StrokeThickness="1">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="35" />
                     </Border.StrokeShape>
 
+                    <!-- Label inside the border -->
                     <Label Text="Your Location"
-               FontSize="Default" />
+                   FontSize="Default" />
                 </Border>
+
+                <!-- Gesture Recognizers applied to Grid -->
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapLocation" Tapped="TapLocation_Tapped"/>
+                </Grid.GestureRecognizers>
             </Grid>
 
+            <!-- Search button -->
             <ImageButton Source="search.jpg"
-                     HeightRequest="30"
-                     WidthRequest="30"
-                     HorizontalOptions="EndAndExpand"/>
-
+                 HeightRequest="30"
+                 WidthRequest="30"
+                 HorizontalOptions="EndAndExpand"/>
         </StackLayout>
+
         <StackLayout Grid.Row="1"
                      Orientation="Vertical">
             <Label x:Name="LblCity" 
@@ -66,8 +75,7 @@
             <Label x:Name="LblHumidity"
                    Grid.Row="1"
                    Grid.Column="0"
-                   HorizontalOptions="Center"
-                   Text="88"/>
+                   HorizontalOptions="Center"/>
             <Label x:Name="LblTemperature"
                    Grid.Row="0"
                    Grid.Column="1"
@@ -103,15 +111,18 @@
                                HorizontalOptions="Center"
                                VerticalOptions="Start"
                                HeightRequest="50"
-                               WidthRequest="50"/>
+                               WidthRequest="50"
+                               Source="{Binding weather[0].fullIconUrl}"/>
 
                         <Label Grid.Row="1"
                                FontSize="Large"
-                               HorizontalOptions="Center"/>
+                               HorizontalOptions="Center"
+                               Text="{Binding main.temperature}"/>
 
                         <Label Grid.Row="2"
                                FontSize="Small"
-                               HorizontalOptions="Center"/>
+                               HorizontalOptions="Center"
+                               Text="{Binding dateTime}"/>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

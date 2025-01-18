@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UtcTimeLibrary;
 
 namespace WeatherApp.Models
 {
@@ -32,6 +33,8 @@ namespace WeatherApp.Models
     public class List
     {
         public int dt { get; set; }
+
+        public string dateTime => UtcTimeLibrary.UtcTimeStamp.ConvertToUtc(dt);
         public Main main { get; set; }
         public List<Weather> weather { get; set; }
         public Clouds clouds { get; set; }
