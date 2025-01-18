@@ -16,6 +16,8 @@
 ## Introduction
 This Weather Application is a cross-platform application built with C#. It fetches real-time weather data based on the user's current location and displays details such as temperature, humidity, wind speed, and a general weather description. The app provides an intuitive user interface and integrates with a weather API to offer accurate and up-to-date weather information.
 
+![image](https://github.com/user-attachments/assets/e9c808d7-08ca-46c0-8f7a-6f6f76f4aec5)
+
 ---
 
 ## Features
